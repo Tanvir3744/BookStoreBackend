@@ -13,9 +13,7 @@
     "prepare": "husky"
   },
   "author": "Biplob Hossen",
-  "lint-staged": {
-    "src/**/*.ts": "yarn lint-prettier"
-  },
+  "lint-staged": ""
   "license": "ISC",
   "devDependencies": {
     "eslint-config-prettier": "^9.1.0",

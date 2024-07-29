@@ -13,7 +13,7 @@
     "prepare": "husky"
   },
   "author": "Biplob Hossen",
-  "lint-staged": {
+  "lint-staged":{
     "src/**/*.ts": "yarn lint-prettier"
   },
   "license": "ISC",
