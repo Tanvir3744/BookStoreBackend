@@ -1,6 +1,5 @@
 import mongoose from "mongoose";
 import { IGenericErrorMessage } from "../interface/error";
-import { NOT_FOUND } from "http-status";
 
 
 
@@ -11,13 +10,5 @@ const validationError = (err: mongoose.Error.ValidationError) => {
             message: elem.message
         };
     });
-    const statusCode = NOT_FOUND;
-
-    return {
-        statusCode,
-        message: "validationError",
-        errorMessage: errors,
-    }
+    const statusCode: 
 }
-
-export default validationError;

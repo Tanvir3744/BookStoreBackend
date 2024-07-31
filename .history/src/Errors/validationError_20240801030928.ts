@@ -19,5 +19,3 @@ const validationError = (err: mongoose.Error.ValidationError) => {
         errorMessage: errors,
     }
 }
-
-export default validationError;
