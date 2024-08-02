@@ -1,7 +1,6 @@
 import mongoose from "mongoose";
 import { IGenericErrorResponse } from "../interface/common";
 import { NOT_FOUND } from "http-status";
-import { IGenericErrorMessage } from "../interface/error";
 
 const handleCastError = (err:mongoose.Error.CastError): IGenericErrorResponse => {
     // declare the variable to store the errors with types;

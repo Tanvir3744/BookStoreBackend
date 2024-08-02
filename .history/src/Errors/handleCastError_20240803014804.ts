@@ -1,11 +1,10 @@
 import mongoose from "mongoose";
 import { IGenericErrorResponse } from "../interface/common";
 import { NOT_FOUND } from "http-status";
-import { IGenericErrorMessage } from "../interface/error";
 
 const handleCastError = (err:mongoose.Error.CastError): IGenericErrorResponse => {
     // declare the variable to store the errors with types;
-    const errors: IGenericErrorMessage[] = [{ path: err.path, message: "Invalid Object ID" }];
+    const errors: IGenericErrorMessage[] = [{ path: err.path, message: err.message }];
     
     //declare the status code is not found
     const statusCode = NOT_FOUND;
