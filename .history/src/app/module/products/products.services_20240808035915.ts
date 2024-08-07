@@ -11,6 +11,5 @@ const getSingleProduct = async (id: string) => {
 }
 
 export const ProductServices = {
-    createProduct,
-    getSingleProduct
+    createProduct
 }

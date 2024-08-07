@@ -1,4 +1,4 @@
-import { NextFunction, Request, Response } from "express";
+import { NextFunction, request, Request, Response } from "express";
 import catchAsync from "../../../shared/catchAsync";
 import SendResponse from "../../../shared/sendResponse";
 import { OK } from "http-status";
@@ -19,8 +19,7 @@ const createProduct = catchAsync(async (req: Request, res: Response, next: NextF
     next()
 });
 
-const getSingleProduct = catchAsync(async (req: Request, res: Response) => {
-    const { id } = req.params;
+const getSingleProduct = catchAsync(async (req:Request, res: Response) => {
     const result = await ProductServices.getSingleProduct(id);
     SendResponse(res, {
         statusCode: OK,

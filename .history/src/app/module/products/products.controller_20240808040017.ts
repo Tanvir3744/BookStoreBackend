@@ -1,4 +1,4 @@
-import { NextFunction, Request, Response } from "express";
+import { NextFunction, request, Request, Response } from "express";
 import catchAsync from "../../../shared/catchAsync";
 import SendResponse from "../../../shared/sendResponse";
 import { OK } from "http-status";
