@@ -1,5 +1,3 @@
-import { Model } from "mongoose"
-
 export type IProduct = {
     title: string, 
     price: number, 
@@ -8,10 +6,4 @@ export type IProduct = {
     language: string, 
     pages: number, 
     stock: number, 
-}
-
-export type ProductModel = Model<IProduct, Record<string, unknown>> 
-
-export type IProductFilter = {
-    searchTerm?: string, 
 }

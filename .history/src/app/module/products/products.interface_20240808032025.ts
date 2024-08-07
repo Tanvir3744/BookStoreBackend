@@ -10,7 +10,7 @@ export type IProduct = {
     stock: number, 
 }
 
-export type ProductModel = Model<IProduct, Record<string, unknown>> 
+export const ProductModel = Model<IProduct, Record<string, unknown>> 
 
 export type IProductFilter = {
     searchTerm?: string, 
