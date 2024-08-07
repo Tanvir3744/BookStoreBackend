@@ -11,12 +11,11 @@ const createProduct = catchAsync(async (req: Request, res: Response, next: NextF
     // send data to the services;
     const result = await ProductServices.createProduct(productsData);
     SendResponse(res, {
-        statusCode: OK,
-        success: true,
-        message: "Product has been created",
+        statusCode: OK, 
+        success: true, 
+        message: "Product has been created", 
         data: result
-    });
-    next()
+    })
 });
 
 export const ProductController = {
