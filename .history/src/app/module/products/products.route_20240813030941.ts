@@ -5,4 +5,4 @@ const router = express.Router();
 
 router.post("/create-product", ProductController.createProduct);
 
-export const ProductRoutes= router;
+export const ProductRoute= router;
