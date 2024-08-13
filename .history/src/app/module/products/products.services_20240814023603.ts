@@ -19,10 +19,10 @@ const getSingleProduct = async (id: string) => {
 // get all products and create pagination filtering sorting and
 //searching along with this service
 
-const getAllProducts = async(
+const getAllProducts = (
   filters: IProductFilter,
   paginationOptions: IPaginationOptions
-): Promise<IGenericResponse<IProduct[]>> => {
+): Promise<IGenericResponse<IProduct>> => {
   const { searchTerm, ...filtersData } = filters
 
   // implement search functionalities ;
@@ -70,16 +70,6 @@ const getAllProducts = async(
   
   const result = await Product.find(whereCondition).sort(sortCondition).skip(skip).limit(limit)
   
-  const total = await Product.countDocuments();
-
-  return {
-    meta: {
-      page, 
-      limit,
-      total
-    },
-    data: result
-  }
 }
 export const ProductServices = {
   createProduct,

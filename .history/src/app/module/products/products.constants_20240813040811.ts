@@ -1,0 +1,1 @@
+export const ProductSearchableFiled =  ['title', 'genre', 'writer', 'year']

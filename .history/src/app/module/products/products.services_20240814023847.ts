@@ -22,7 +22,7 @@ const getSingleProduct = async (id: string) => {
 const getAllProducts = async(
   filters: IProductFilter,
   paginationOptions: IPaginationOptions
-): Promise<IGenericResponse<IProduct[]>> => {
+): Promise<IGenericResponse<IProduct>> => {
   const { searchTerm, ...filtersData } = filters
 
   // implement search functionalities ;
