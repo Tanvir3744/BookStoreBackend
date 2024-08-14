@@ -89,7 +89,7 @@ const updateProduct = async (id:string, payload:Partial<IProduct>) : Promise<IPr
 }
 
 
-const deleteProduct = async (id: string): Promise<IProduct | null> => {
+const deleteProduct = async (id: string): Promise<IProduct: null> => {
   const result = await Product.findByIdAndDelete(id);
   return result; 
 }
@@ -100,6 +100,5 @@ export const ProductServices = {
   createProduct,
   getSingleProduct,
   getAllProducts,
-  updateProduct, 
-  deleteProduct
+  updateProduct
 }

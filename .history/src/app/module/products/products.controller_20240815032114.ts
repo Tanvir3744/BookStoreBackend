@@ -85,5 +85,4 @@ export const ProductController = {
     getSingleProduct, 
     getAllProduct,
     updateProduct,
-    deleteProduct
 }

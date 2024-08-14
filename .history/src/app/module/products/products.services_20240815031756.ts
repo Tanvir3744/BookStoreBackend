@@ -100,6 +100,5 @@ export const ProductServices = {
   createProduct,
   getSingleProduct,
   getAllProducts,
-  updateProduct, 
-  deleteProduct
+  updateProduct
 }
