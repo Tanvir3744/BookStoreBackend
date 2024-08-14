@@ -61,7 +61,7 @@ const updateProduct = catchAsync(async (req: Request, res: Response) => {
         statusCode: OK,
         success: true,
         message: "product data has beed updated",
-        data: result,
+        data: result;
     })
 })
 
@@ -70,6 +70,5 @@ const updateProduct = catchAsync(async (req: Request, res: Response) => {
 export const ProductController = {
     createProduct,
     getSingleProduct, 
-    getAllProduct,
-    updateProduct,
+    getAllProduct
 }

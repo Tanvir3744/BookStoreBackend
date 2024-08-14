@@ -83,9 +83,8 @@ const getAllProducts = async(
 }
 
 
-const updateProduct = async (id:string, payload:Partial<IProduct>) : Promise<IProduct | null>  => {
-  const result = await Product.findOneAndUpdate({ _id: id }, payload, { new: true });
-  return result;
+const updateProduct = async () => {
+  
 }
 export const ProductServices = {
   createProduct,

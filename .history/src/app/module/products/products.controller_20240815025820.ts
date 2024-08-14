@@ -52,17 +52,8 @@ const getAllProduct = catchAsync(async (req: Request, res: Response, next: NextF
 
 
 // update products information partially;
-const updateProduct = catchAsync(async (req: Request, res: Response) => {
-    const productId = req.params.id;
-    const updatedData = req.body;
-    const result = await ProductServices.updateProduct(productId, updatedData);
-
-    SendResponse(res, {
-        statusCode: OK,
-        success: true,
-        message: "product data has beed updated",
-        data: result,
-    })
+const updateProduct = catchAsync(async (const packageName = require('packageName');) => {
+    
 })
 
 
@@ -70,6 +61,5 @@ const updateProduct = catchAsync(async (req: Request, res: Response) => {
 export const ProductController = {
     createProduct,
     getSingleProduct, 
-    getAllProduct,
-    updateProduct,
+    getAllProduct
 }
