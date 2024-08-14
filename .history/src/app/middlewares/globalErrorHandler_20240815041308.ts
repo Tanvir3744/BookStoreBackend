@@ -1,4 +1,4 @@
-import { ErrorRequestHandler, Request, Response } from "express";
+import { ErrorRequestHandler, Response } from "express";
 import { IGenericErrorMessage } from "../../interface/error";
 import validationError from "../../Errors/validationError";
 import handleCastError from "../../Errors/handleCastError";
@@ -46,7 +46,7 @@ const globalErrorHandler: ErrorRequestHandler = (err, req: Request, res: Respons
         success: false,
         message,
         errorMessages, 
-        stack: config.env !== "production" ? err.stack : undefined
+        stack: config.env !== "production" ? err.stack : undefined;
         })
 }
 

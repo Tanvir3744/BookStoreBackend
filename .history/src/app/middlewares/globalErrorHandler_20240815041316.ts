@@ -1,4 +1,4 @@
-import { ErrorRequestHandler, Request, Response } from "express";
+import { ErrorRequestHandler, Response } from "express";
 import { IGenericErrorMessage } from "../../interface/error";
 import validationError from "../../Errors/validationError";
 import handleCastError from "../../Errors/handleCastError";

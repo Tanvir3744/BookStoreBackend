@@ -1,4 +1,4 @@
-import { ErrorRequestHandler, Request, Response } from "express";
+import { ErrorRequestHandler } from "express";
 import { IGenericErrorMessage } from "../../interface/error";
 import validationError from "../../Errors/validationError";
 import handleCastError from "../../Errors/handleCastError";
@@ -8,12 +8,7 @@ import ApiError from "./apiError";
 import config from "../../config";
 
 const globalErrorHandler: ErrorRequestHandler = (err, req: Request, res: Response) => {
-
-    config.env === 'development'
-    ? console.log('global error handler', err)
-        : console.log('global error handler', err)
-    
-    let statusCode = 500;
+    let statusCode: 500;
     let message = "something went wrong";
     let errorMessages: IGenericErrorMessage[] = [];
 
@@ -46,7 +41,7 @@ const globalErrorHandler: ErrorRequestHandler = (err, req: Request, res: Respons
         success: false,
         message,
         errorMessages, 
-        stack: config.env !== "production" ? err.stack : undefined
+        stack: config.env !== "production" ? err.stack : undefined;
         })
 }
 
