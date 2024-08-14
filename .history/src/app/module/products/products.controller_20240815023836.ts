@@ -37,16 +37,7 @@ const getAllProduct = catchAsync(async (req: Request, res: Response, next: NextF
     const filterData = pick(req.query, ProductFilterableFiled);
     const paginationOptions = pick(req.query, paginationFields)
 
-    const result = await ProductServices.getAllProducts(filterData, paginationOptions);
-
-    SendResponse(res, {
-        statusCode: OK,
-        success: true,
-        message: "All Prodcuts has been retrived",
-        data: result.data,
-        meta: result.meta
-    });
-    next()
+    const result = await ProductServices.getAllProducts(filterData, paginationOptions)
 
 })
 

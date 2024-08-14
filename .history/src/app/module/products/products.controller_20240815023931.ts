@@ -41,12 +41,10 @@ const getAllProduct = catchAsync(async (req: Request, res: Response, next: NextF
 
     SendResponse(res, {
         statusCode: OK,
-        success: true,
+        success: true, 
         message: "All Prodcuts has been retrived",
-        data: result.data,
-        meta: result.meta
-    });
-    next()
+        data: result.data
+    })
 
 })
 
