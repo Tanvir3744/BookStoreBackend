@@ -4,7 +4,6 @@ import cors from 'cors'
 /* import mainRouter from './app/routes' */
 import httpStatus from 'http-status'
 import cookieParser from 'cookie-parser'
-import globalErrorHandler from './app/middlewares/globalErrorHandler'
 
 
 const app: Application = express()
