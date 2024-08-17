@@ -9,7 +9,7 @@ export type IUser = {
     email: string, 
     password: string, 
     phoneNumber: string, 
-    role: string,
+    role: string
     needsPasswordChange?: boolean,
 }
 
