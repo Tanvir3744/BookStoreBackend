@@ -1,4 +1,4 @@
-import {  Model, Types } from "mongoose"
+import {  Types } from "mongoose"
 import { IProduct } from "../products/products.interface"
 
 export type IAuthor = {
@@ -10,10 +10,3 @@ export type IAuthor = {
     website: string, 
 }
  
-export type AuthorModel = Model<IAuthor, Record<string, unknown>>;
-
-export type IAuthorFilter = {
-    name?: string, 
-    nationalilty?: string,
-    booksWritten?: string, 
-}

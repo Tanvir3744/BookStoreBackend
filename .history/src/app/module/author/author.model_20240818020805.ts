@@ -29,4 +29,4 @@ const AuthorSchema = new Schema({
     }
 });
 
-export const Author = model<IAuthor, AuthorModel>("Author", AuthorSchema);
+export const Author = model<IAuthor, AuthorModel>("Author", AuthorSchema)

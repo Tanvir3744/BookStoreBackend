@@ -10,10 +10,4 @@ export type IAuthor = {
     website: string, 
 }
  
-export type AuthorModel = Model<IAuthor, Record<string, unknown>>;
-
-export type IAuthorFilter = {
-    name?: string, 
-    nationalilty?: string,
-    booksWritten?: string, 
-}
+export type AuthorModel = Model<IAuthor,Record<string, unknown>>
